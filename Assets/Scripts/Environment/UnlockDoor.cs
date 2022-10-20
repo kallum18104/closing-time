@@ -17,7 +17,7 @@ public class UnlockDoor : MonoBehaviour
 
     public GameObject progressObj;
 
-    public GameObject TheCamera;
+  //  public GameObject TheCamera;
     public GameObject TheDoor;
 
     public GameObject Essentials;
@@ -60,16 +60,15 @@ public class UnlockDoor : MonoBehaviour
         {
             StartCoroutine(DoorSequence());
             Essentials.SetActive(false);
+            TheDoor.SetActive(true);
         }
     }
 
     IEnumerator DoorSequence()
     {
-        yield return new WaitForSeconds(3.5f);
-        TheDoor.GetComponent<Animation>().Play("DoorsOpen");
-        yield return new WaitForSeconds(1.25f);
-        TheCamera.GetComponent<Animation>().Play("Cam2");
-        yield return new WaitForSeconds(3);
+    //    yield return new WaitForSeconds(3.5f);
+
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene("Parking Lot");
 
     }
