@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Main Menu.unity
+    path: Assets/Scenes/Non-Gameplay/Main Menu.unity
     guid: e4dcaebb07a297d4dbe68ac51bb766cc
   - enabled: 1
-    path: Assets/The Shop.unity
+    path: Assets/Scenes/Gameplay/The Shop.unity
     guid: e8a38ce024bda0649bc6f5f575f35bd3
   - enabled: 1
-    path: Assets/Scenes/End.unity
+    path: Assets/Scenes/Gameplay/Parking Lot.unity
+    guid: af9cf1f7b01f56c4285776c45a6d0eb3
+  - enabled: 1
+    path: Assets/Scenes/Non-Gameplay/End.unity
     guid: 241e125d3c787ad4fb45a124cdf73f5f
   m_configObjects: {}

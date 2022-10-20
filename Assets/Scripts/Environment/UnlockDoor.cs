@@ -17,6 +17,11 @@ public class UnlockDoor : MonoBehaviour
 
     public GameObject progressObj;
 
+    public GameObject TheCamera;
+    public GameObject TheDoor;
+
+    public GameObject Essentials;
+
         void OnTriggerStay(Collider plyr)
         {
             if ((plyr.gameObject.tag == "Player") &&(_keyGrab.keyGrabbed))
@@ -53,8 +58,20 @@ public class UnlockDoor : MonoBehaviour
 
         if(timer >= timeToGet)
         {
-            SceneManager.LoadScene("End");
+            StartCoroutine(DoorSequence());
+            Essentials.SetActive(false);
         }
+    }
+
+    IEnumerator DoorSequence()
+    {
+        yield return new WaitForSeconds(3.5f);
+        TheDoor.GetComponent<Animation>().Play("DoorsOpen");
+        yield return new WaitForSeconds(1.25f);
+        TheCamera.GetComponent<Animation>().Play("Cam2");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Parking Lot");
+
     }
 
 }
