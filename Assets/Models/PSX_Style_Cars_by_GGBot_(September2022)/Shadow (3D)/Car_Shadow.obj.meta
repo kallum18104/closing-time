@@ -3,7 +3,12 @@ guid: d9369a18699778e4b9374e610bde0b2e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: car_shadow_mat
+    second: {fileID: 2100000, guid: c72df77bf18e242419690da770e6ef1e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

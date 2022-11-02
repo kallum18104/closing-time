@@ -60,6 +60,9 @@ public class ReadNotes : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             pickUpText.SetActive(false);
+            Time.timeScale = 0;
+            pause.look.sensX = 0;
+            pause.look.sensY = 0;
             pause.look.enabled = false;
             pause.move.enabled = false;
             pause.leaning.enabled = false;
@@ -79,9 +82,11 @@ public class ReadNotes : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Time.timeScale = 1;
         pause.look.enabled = true;
         pickUpText.SetActive(true);
-
+        pause.look.sensX = 120;
+        pause.look.sensY = 120;
         pause.move.enabled = true;
         pause.leaning.enabled = true;
         pause.canPause = false;

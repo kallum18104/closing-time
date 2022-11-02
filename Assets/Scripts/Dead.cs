@@ -12,6 +12,8 @@ public class Dead : MonoBehaviour
     public GameObject deathScreen;
 
     public Sway sway;
+
+    public GameObject enemy;
     void Start()
     {
         
@@ -27,6 +29,7 @@ public class Dead : MonoBehaviour
             pause.move.enabled = false;
             pause.leaning.enabled = false;
             pause.canPause = false;
+            enemy.SetActive(false);
         }
         else
         {
